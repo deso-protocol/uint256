@@ -1,3 +1,10 @@
+# deso-protocol/Uint256
+This is a forked version of (https://github.com/holiman/uint256)[https://github.com/holiman/uint256]. 
+When deso-protocol go repositories began using this dependency, uint256 would marshal as a hex string.
+The source updated its code to better mirror the BigInt library to marshal as a decimal string.
+In order to maintain our APIs as they were but still take advantage of the latest updates, we have fork
+the repository and only made changes to revert to using a hex string for marshaling.
+
 # Fixed size 256-bit math library
 
 This is a library specialized at replacing the big.Int library for math based on 256-bit types, used by both 

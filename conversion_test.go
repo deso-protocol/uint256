@@ -1278,19 +1278,19 @@ func TestEnDecode(t *testing.T) {
 		if have, want := intSample.Hex(), fmt.Sprintf("0x%s", bigSample.Text(16)); have != want {
 			t.Fatalf("test %d #1, have %v, want %v", i, have, want)
 		}
-		if have, want := intSample.String(), bigSample.String(); have != want {
+		if have, want := intSample.String(), wantHex; have != want {
 			t.Fatalf("test %d String(), have %v, want %v", i, have, want)
 		}
 		{
 			have, _ := intSample.MarshalText()
-			want, _ := bigSample.MarshalText()
+			want := []byte(wantHex)
 			if !bytes.Equal(have, want) {
 				t.Fatalf("test %d MarshalText, have %q, want %q", i, have, want)
 			}
 		}
 		{
 			have, _ := intSample.MarshalJSON()
-			want := []byte(fmt.Sprintf(`"%s"`, bigSample.Text(10)))
+			want := []byte(fmt.Sprintf(`"0x%s"`, bigSample.Text(16)))
 			if !bytes.Equal(have, want) {
 				t.Fatalf("test %d MarshalJSON, have %q, want %q", i, have, want)
 			}

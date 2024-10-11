@@ -692,7 +692,7 @@ func (z *Int) EncodeRLP(w io.Writer) error {
 // MarshalText implements encoding.TextMarshaler
 // MarshalText marshals using the decimal representation (compatible with big.Int)
 func (z *Int) MarshalText() ([]byte, error) {
-	return []byte(z.Dec()), nil
+	return []byte(z.Hex()), nil
 }
 
 // MarshalJSON implements json.Marshaler.
@@ -703,7 +703,7 @@ func (z *Int) MarshalText() ([]byte, error) {
 // integer space. Thus, U256 uses string-format, which is not compatible with
 // big.int (big.Int refuses to unmarshal a string representation).
 func (z *Int) MarshalJSON() ([]byte, error) {
-	return []byte(`"` + z.Dec() + `"`), nil
+	return []byte(`"` + z.Hex() + `"`), nil
 }
 
 // UnmarshalJSON implements json.Unmarshaler. UnmarshalJSON accepts either
@@ -719,7 +719,7 @@ func (z *Int) UnmarshalJSON(input []byte) error {
 
 // String returns the decimal encoding of b.
 func (z *Int) String() string {
-	return z.Dec()
+	return z.Hex()
 }
 
 const (
