@@ -10,9 +10,9 @@ the repository and only made changes to revert to using a hex string for marshal
 This is a library specialized at replacing the big.Int library for math based on 256-bit types, used by both 
 [go-ethereum](https://github.com/ethereum/go-ethereum) and [erigon](https://github.com/ledgerwatch/erigon).
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/holiman/uint256.svg)](https://pkg.go.dev/github.com/holiman/uint256)
-[![codecov](https://codecov.io/gh/holiman/uint256/branch/master/graph/badge.svg?token=LHs7xL99wQ)](https://codecov.io/gh/holiman/uint256)
-[![DeepSource](https://deepsource.io/gh/holiman/uint256.svg/?label=active+issues&token=CNJRIm7wXZdOM9xKKH4hXUKd)](https://deepsource.io/gh/holiman/uint256/?ref=repository-badge)
+[![Go Reference](https://pkg.go.dev/badge/github.com/deso-protocol/uint256.svg)](https://pkg.go.dev/github.com/deso-protocol/uint256)
+[![codecov](https://codecov.io/gh/deso-protocol/uint256/branch/master/graph/badge.svg?token=LHs7xL99wQ)](https://codecov.io/gh/deso-protocol/uint256)
+[![DeepSource](https://deepsource.io/gh/deso-protocol/uint256.svg/?label=active+issues&token=CNJRIm7wXZdOM9xKKH4hXUKd)](https://deepsource.io/gh/deso-protocol/uint256/?ref=repository-badge)
 
 ## Benchmarks
 
