@@ -18,9 +18,9 @@ import (
 type Int [4]uint64
 
 // NewInt returns a new initialized Int.
-func NewInt(val uint64) *Int {
+func NewInt() *Int {
 	z := &Int{}
-	z.SetUint64(val)
+	z.SetUint64(0)
 	return z
 }
 
@@ -1293,8 +1293,8 @@ func (z *Int) Sqrt(x *Int) *Int {
 		}
 	}
 
-	z1 := NewInt(1)
-	z2 := NewInt(0)
+	z1 := NewInt().SetUint64(1)
+	z2 := NewInt()
 
 	// Start with value known to be too large and repeat "z = ⌊(z + ⌊x/z⌋)/2⌋" until it stops getting smaller.
 	z1.Lsh(z1, uint(x.BitLen()+1)/2) // must be ≥ √x
